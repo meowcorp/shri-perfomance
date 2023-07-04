@@ -1,0 +1,27 @@
+{
+  "name": "shri-perfomance",
+  "version": "1.0.0",
+  "description": "## Задание Оптимизировать страницу, выложить результат на Github-Pages и отправить его на проверку на [https://shri-performance.ru/](https://shri-performance.ru/), отправив адрес вашей страницы. Нужно набрать минимум **100 баллов**.",
+  "source": "src/index.jsx",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meowcorp/shri-perfomance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meowcorp/shri-perfomance/issues"
+  },
+  "homepage": "https://github.com/meowcorp/shri-perfomance#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
