@@ -5,7 +5,7 @@
   "source": "src/index.jsx",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build ./src/index.html"
+    "build": "parcel build --public-url . ./src/index.html"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,13 @@
   },
   "homepage": "https://github.com/meowcorp/shri-perfomance#readme",
   "devDependencies": {
-    "parcel": "^2.9.3"
   },
   "dependencies": {
+    "@parcel/compressor-brotli": "^2.9.3",
+    "@parcel/compressor-gzip": "^2.9.3",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "service-worker-brotli": "^0.1.1"
   }
 }
