@@ -2,13 +2,9 @@ import React from "react";
 
 function Header() {
     let [expanded, setExpanded] = React.useState(false);
-    let [toggled, setToggled] = React.useState(false);
+    let [toggled, setToggled] = React.useState(true);
 
     const onClick = () => {
-        if (!toggled) {
-            setToggled(true);
-        }
-
         setExpanded(!expanded);
     };
 
