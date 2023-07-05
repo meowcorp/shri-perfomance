@@ -5,16 +5,11 @@ import Event from "./Event";
 
 function List () {
     const ref = React.useRef();
-    const initedRef = React.useRef(false);
-    const [activeTab, setActiveTab] = React.useState('');
+    const [activeTab, setActiveTab] = React.useState(() => {
+        return new URLSearchParams(location.search).get('tab') || 'all'
+    });
     const [hasRightScroll, setHasRightScroll] = React.useState(false);
 
-    React.useEffect(() => {
-        if (!activeTab && !initedRef.current) {
-            initedRef.current = true;
-            setActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
-        }
-    });
 
     const onSelectInput = event => {
         setActiveTab(event.target.value);
@@ -27,7 +22,6 @@ function List () {
 
     React.useEffect(() => {
         const sumWidth = sizes.reduce((acc, item) => acc + item.width, 0);
-        const sumHeight = sizes.reduce((acc, item) => acc + item.height, 0);
 
         const newHasRightScroll = sumWidth > ref.current.offsetWidth;
         if (newHasRightScroll !== hasRightScroll) {
